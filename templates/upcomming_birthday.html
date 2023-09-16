@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>No Upcoming Birthday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            text-align: center; /* Center the h2 element */
+            color: #555;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>There are no upcoming birthdays.</h1>
+
+    <!-- Move h2 to the middle -->
+    <h2>Add a New Birthday:</h2>
+    <form method="POST" action="/add_birthday">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="birthdate">Birthdate (YYYY-MM-DD):</label>
+        <input type="text" id="birthdate" name="birthdate" required><br>
+        <input type="submit" value="Add Birthday">
+    </form>
+</body>
+</html>
+
