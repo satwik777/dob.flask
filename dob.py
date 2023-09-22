@@ -127,8 +127,9 @@ def edit_birthday(id):
     return render_template('edit_birthday.html', id=id, name=data[0], birthdate=data[1])
 
 
-@app.route('/delete/<int:id>')
+@app.route('/delete/<int:id>', methods=['POST'])
 def delete_birthday(id):
+    print("Hi")
     # Delete the entry from the database
     conn = sqlite3.connect('birthday_data.db')
     cursor = conn.cursor()
